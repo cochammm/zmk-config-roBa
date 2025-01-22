@@ -1,5 +1,4 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -10,6 +9,14 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
+};
+
+&msc {
+    x-input-code = <INPUT_REL_HWHEEL>;
+    trigger-period-ms = <0>;
+    acceleration-exponent = <1>;
+    delay-ms = <100>;
+    time-to-max-speed-ms = <250>;
 };
 
 / {
